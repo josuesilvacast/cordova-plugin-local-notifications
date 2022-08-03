@@ -32,6 +32,7 @@ import android.support.v4.app.NotificationCompat.MessagingStyle.Message;
 import android.support.v4.media.app.NotificationCompat.MediaStyle;
 import android.support.v4.media.session.MediaSessionCompat;
 
+import java.security.SecureRandom;
 import java.util.List;
 import java.util.Random;
 
@@ -54,7 +55,7 @@ public final class Builder {
     private final Options options;
 
     // To generate unique request codes
-    private final Random random = new Random();
+    private final SecureRandom random = new SecureRandom();
 
     // Receiver to handle the clear event
     private Class<?> clearReceiver;
